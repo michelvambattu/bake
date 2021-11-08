@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <AppHeader/>
+    <b-container>
+      <router-view/>
+    </b-container>
+    <AppFooter/>
   </div>
 </template>
 
@@ -30,3 +30,17 @@
   }
 }
 </style>
+<script>
+  import AppHeader from '@/components/layout/AppHeader.vue'
+  import AppFooter from '@/components/layout/AppFooter.vue'
+
+  export default {
+    components: {
+      AppHeader,
+      AppFooter
+    },
+    data() {
+      return {}
+    }
+  }
+</script>
